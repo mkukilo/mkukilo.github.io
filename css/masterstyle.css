@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  /*The code above is for convenience*/
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /*The code above is so that the navigation bar doesn't have an ugly white border*/
+}
+
+html {
+  height: 100%;
+}
+
+/*Font Family specifications*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gelasio', serif;
+}
+
+p, a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*Navigation bar*/
+
+.navbar {
+  list-style: none;
+  background-color: #809e87;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar li:hover {
+  background-color: #364239;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar p {
+  color: white;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 150%;
+  font-family: 'Gelasio', serif;
+}
+
+/*Background Picture for the website*/
+
+.backgroundPic {
+  background-image: url(../imgs/darkbackgroundleaf.png);
+  height: 100%;
+  /*Parallax Scrolling Effect*/
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+/*Font Size for the name on the title screen*/
+
+.nameHeader {
+  font-size: 400%;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 30px;
+}
+
+/*Content Box Styling*/
+
+.contentBox {
+  background-color: #2a2d34;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  width: 75%;
+  font-size: 150%;
+  overflow: auto;
+}
+
+/*Content Design and layout for the homepage*/
+
+.contentBox h2 {
+  text-align: center;
+}
+
+.contentBox ul {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.facePic {
+  width: 300px;
+  float: left;
+}
+
+.description {
+  float: right;
+  margin-top: 0;
+  padding-left: 30px;
+  width: calc(100% - 300px);
+}
+
+/*Footer*/
+
+footer {
+  background-color: #2a2d34;
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  vertical-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+/*I hate float*/
+
+.clear {
+  clear: both;
+  line-height: 0;
+}
+
+/*contentBox attributes*/
+
+.contentBox p, ul, a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contentBox a {
+  text-decoration: solid;
+  color: white;
+  font-size: 60%;
+}
+
+iframe {
+  margin-top: 10px;
+  width: 100%;
+}
