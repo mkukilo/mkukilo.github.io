@@ -1,160 +1,756 @@
 * {
   box-sizing: border-box;
-  /*The code above is for convenience*/
+}
+
+a {
+  text-decoration: none;
+  color: #5e5ed0;
+}
+
+img {
+  max-width: 100%;
 }
 
 body {
-  margin: 0;
+  background-color: rgb(191, 38, 38);
+  max-width: 100%;
   padding: 0;
-  height: 100%;
-  /*The code above is so that the navigation bar doesn't have an ugly white border*/
+  margin: 0;
 }
 
 html {
-  height: 100%;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
-/*Font Family specifications*/
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Gelasio', serif;
+.websiteNameTopHeader {
+  background-color: inherit;
+  color: white;
+  font-size: 2rem;
+  width: 100%;
+  padding: 4vh 3vw;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  background-color: #187878;
+  max-width: 100%;
+  font-family: signo, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-p, a {
-  font-family: 'Montserrat', sans-serif;
+.websiteNameTopHeader img {
+  transform: scale(1.2);
+  margin-left: 2vw;
 }
 
-/*Navigation bar*/
-
-.navbar {
-  list-style: none;
-  background-color: #809e87;
-  margin-top: 0;
-  margin-bottom: 0;
-  position: sticky;
-  left: 0;
-  top: 0;
-  z-index: 2;
-}
-
-.navbar li {
+.websiteNameTopHeader h2 {
   display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 
-.navbar li:hover {
-  background-color: #364239;
+/*navigation bar*/
+
+.navBarSticky {
+  background-color: #c53939;
+  padding-top: 1.5vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-bottom: 1.5vh;
+  margin-bottom: 2vh;
 }
 
-.navbar a {
+.navBarSticky a {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  color: white;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-decoration: none;
+  padding: 0 2vw;
+  font-family: signo, sans-serif;
+  letter-spacing: 0.084rem;
+  font-weight: 100;
+  line-height: 1.8em;
+  transition: background 200ms ease-out;
+  transition-delay: 20ms;
+}
+
+.navBarSticky a:hover {
+  background-color: rgb(255, 77, 77);
+}
+
+/*Active page button colors might not be final*/
+
+#active {
+  background-color: #7c1919;
+  transition: background 150ms ease-out;
+  transition-delay: 20ms;
+}
+
+#active:hover {
+  background-color: rgb(255, 77, 77);
+}
+
+.navBarSticky a div {
+  color: inherit;
+  text-transform: uppercase;
+  /*border-bottom: 3px solid transparent;
+  transition: border 85ms ease;*/
+}
+
+/*page content*/
+
+.sideSticky {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  background-color: #ce9459;
+  font-family: ff-dax-pro, sans-serif;
+  list-style: none;
+  text-align: center;
+  padding: 3vh;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  flex-grow: 1;
+  width: 25%;
+  margin-bottom: 3vh;
+}
+
+.sideSticky ul, .sideSticky ul li {
+  list-style: none;
+  padding-left: 0;
+}
+
+#wrapper {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 6vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+aside {
+  width: 72.473%;
+}
+
+.readBox {
+  display: flex;
+  width: 100%;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-family: ff-dax-pro, sans-serif;
+  /*use this margin if you decide to remove the wrapper from  the page you will have to remove margin bottom though*/
+  /*margin: auto 10vw 3vh 10vw;*/
+  margin-bottom: 3vh;
+  font-size: 125%;
+  border: 1vh #187878 solid;
+  padding: 2vw;
+}
+
+#ourMission div {
+  background-color: #187878;
+  padding: 1vh;
+  margin: 1vh 1vw;
+}
+
+#ourMission h2 {
+  font-size: 500%;
+}
+
+#ourMission p {
+  font-size: 1.35rem;
+  line-height: 2rem;
+}
+
+/*4 boxes styling*/
+
+.miniBoxQuarterParent {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-family: ff-dax-pro, sans-serif;
+  margin-bottom: 3vh;
+}
+
+.miniBoxQuarter {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  /*padding: 1vh;*/
+  background-color: #187878;
+  margin-left: 0.325vw;
+  margin-right: 0.325vw;
+}
+
+.textQuarter {
+  padding: 1vh;
+}
+
+.miniBoxQuarter img {
+  width: 100%;
+}
+
+.news {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2vh;
+  font-family: ff-dax-pro, sans-serif;
+}
+
+.newsbox {
+  display: flex;
+  flex-direction: column;
+  background-color: #efcaca;
+  width: 25%;
+  padding: 2vh;
+  font-size: larger;
+}
+
+.newsbox div {
+  background-color: #efcaca;
+  padding: 1vh;
+  margin-bottom: 3vh
+}
+
+.left {
+  margin-right: 0.5vw;
+  flex-grow: 2;
+}
+
+.right {
+  margin-left: 0.5vw;
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #4c3b3b;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  color: white;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul a {
   text-decoration: none;
 }
 
-.navbar p {
+footer ul li a {
+  font-family: ff-dax-pro, sans-serif;
+  line-height: 2;
   color: white;
-  text-transform: uppercase;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-size: 150%;
-  font-family: 'Gelasio', serif;
 }
 
-/*Background Picture for the website*/
+footer ul li a:hover {
+  text-decoration: underline;
+}
 
-.backgroundPic {
-  background-image: url(../imgs/darkbackgroundleaf.png);
-  height: 100%;
-  /*Parallax Scrolling Effect*/
-  background-attachment: fixed;
+.footerItems {
+  border-bottom: white 0.125vh solid;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+}
+
+.bottomMark {
+  color: inherit;
+  text-align: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  font-family: ff-dax-pro, sans-serif;
+  transition-duration: 500ms;
+}
+
+.socialMedia {
+  border-bottom: white solid 0.125vh;
+}
+
+.socialMedia svg {
+  height: 7.5vh;
+  margin: 2vh 5vw;
+  transition: fill 200ms ease-out;
+  transition-delay: 20ms;
+}
+
+.socialMedia svg:hover {
+  fill: white;
+}
+
+@media screen and (max-width: 760px) {
+  .navBarSticky {
+    flex-direction: column;
+  }
+  .miniBoxQuarterParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+  }
+  .miniBoxQuarter {
+    width: 100%;
+    margin-bottom: 3vh;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .news {
+    flex-direction: column;
+  }
+  .newsbox {
+    width: 100%;
+    margin: 0 0 3vh 0;
+  }
+  .right {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    flex-grow: 0;
+  }
+  .left {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    flex-grow: 0;
+  }
+  .footerItems {
+    flex-flow: column wrap;
+    width: 100%;
+  }
+  .footerItems div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  aside {
+    width: 100%;
+  }
+  .sideSticky {
+    margin: auto auto 3vh auto;
+  }
+  .socialMedia {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
+
+/*Ich weiß nicht, wie ich es machen sollte, dass "Our Mission" nicht abgeschnitten wird, also hab ich es einfach ab 560px versteckt*/
+
+@media screen and (max-width: 560px) {
+  #bigHeadline {
+    display: none;
+  }
+}
+
+/*image animations for destinations*/
+
+.imageQuarter {
+  width: 100%;
+  height: 25vh;
+}
+
+#italy {
+  background-image: url(../img/Italy/italy1.jpg);
   background-size: cover;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
 }
 
-/*Font Size for the name on the title screen*/
-
-.nameHeader {
-  font-size: 400%;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 0;
-  padding-top: 30px;
+#italy:hover {
+  animation-name: itAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
-/*Content Box Styling*/
-
-.contentBox {
-  background-color: #2a2d34;
-  color: white;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px;
-  width: 75%;
-  font-size: 150%;
-  overflow: auto;
+@keyframes itAnim {
+  0% {
+    background-image: url(../img/Italy/italy1.jpg);
+  }
+  33% {
+    background-image: url(../img/Italy/italy2.jpg);
+  }
+  66% {
+    background-image: url(../img/Italy/italy3.jpg);
+  }
 }
 
-/*Content Design and layout for the homepage*/
-
-.contentBox h2 {
-  text-align: center;
+#england {
+  background-image: url(../img/England/england1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.contentBox ul {
-  font-family: 'Montserrat', sans-serif;
+#england:hover {
+  animation-name: engAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
-.facePic {
-  width: 300px;
-  float: left;
+@keyframes engAnim {
+  0% {
+    background-image: url(../img/England/england1.jpg);
+  }
+  33% {
+    background-image: url(../img/England/england2.jpg);
+  }
+  66% {
+    background-image: url(../img/England/england3.jpg);
+  }
 }
 
-.description {
-  float: right;
-  margin-top: 0;
-  padding-left: 30px;
-  width: calc(100% - 300px);
+@keyframes engAnim {
+  0% {
+    background-image: url(../img/England/england1.jpg);
+  }
+  33% {
+    background-image: url(../img/England/england2.jpg);
+  }
+  66% {
+    background-image: url(../img/England/england3.jpg);
+  }
 }
 
-/*Footer*/
-
-footer {
-  background-color: #2a2d34;
-  position: static;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+#hawaii {
+  background-image: url(../img/Hawaii/hawaii1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-footer p {
-  text-align: center;
-  vertical-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
+#hawaii:hover {
+  animation-name: hwAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
-/*I hate float*/
-
-.clear {
-  clear: both;
-  line-height: 0;
+@keyframes hwAnim {
+  0% {
+    background-image: url(../img/Hawaii/hawaii1.jpg);
+  }
+  33% {
+    background-image: url(../img/Hawaii/hawaii2.jpg);
+  }
+  66% {
+    background-image: url(../img/Hawaii/hawaii3.jpg);
+  }
 }
 
-/*contentBox attributes*/
-
-.contentBox p, ul, a {
-  font-family: 'Montserrat', sans-serif;
+#jakarta {
+  background-image: url(../img/Jakarta/jakarta1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.contentBox a {
-  text-decoration: solid;
-  color: white;
-  font-size: 60%;
+#jakarta:hover {
+  animation-name: jkAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
-iframe {
-  margin-top: 10px;
-  width: 100%;
+@keyframes jkAnim {
+  0% {
+    background-image: url(../img/Jakarta/jakarta1.jpg);
+  }
+  33% {
+    background-image: url(../img/Jakarta/jakarta2.jpg);
+  }
+  66% {
+    background-image: url(../img/Jakarta/jakarta3.jpg);
+  }
+}
+
+#japan {
+  background-image: url(../img/Japan/japan1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#japan:hover {
+  animation-name: jpAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes jpAnim {
+  0% {
+    background-image: url(../img/Japan/japan1.jpg);
+  }
+  33% {
+    background-image: url(../img/Japan/japan2.jpg);
+  }
+  66% {
+    background-image: url(../img/Japan/japan3.jpg);
+  }
+}
+
+#au {
+  background-image: url(../img/Australia/australia1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#au:hover {
+  animation-name: auAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes auAnim {
+  0% {
+    background-image: url(../img/Australia/australia1.jpg);
+  }
+  33% {
+    background-image: url(../img/Australia/australia2.jpg);
+  }
+  66% {
+    background-image: url(../img/Australia/australia3.jpg);
+  }
+}
+
+#sa {
+  background-image: url(../img/southAfrica/sa1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#sa:hover {
+  animation-name: saAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes saAnim {
+  0% {
+    background-image: url(../img/southAfrica/sa1.jpg);
+  }
+  33% {
+    background-image: url(../img/southAfrica/sa2.jpg);
+  }
+  66% {
+    background-image: url(../img/southAfrica/sa3.jpg);
+  }
+}
+
+#bangkok {
+  background-image: url(../img/Bangkok/bangkok1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#bangkok:hover {
+  animation-name: bkAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bkAnim {
+  0% {
+    background-image: url(../img/Bangkok/bangkok1.jpg);
+  }
+  33% {
+    background-image: url(../img/Bangkok/bangkok2.jpg);
+  }
+  66% {
+    background-image: url(../img/Bangkok/bangkok3.jpg);
+  }
+}
+
+#seoul {
+  background-image: url(../img/Seoul/seoul1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#seoul:hover {
+  animation-name: slAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slAnim {
+  0% {
+    background-image: url(../img/Seoul/seoul1.jpg);
+  }
+  33% {
+    background-image: url(../img/Seoul/seoul2.jpg);
+  }
+  66% {
+    background-image: url(../img/Seoul/seoul3.jpg);
+  }
+}
+
+#paris {
+  background-image: url(../img/Paris/paris1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#paris:hover {
+  animation-name: prAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes prAnim {
+  0% {
+    background-image: url(../img/Paris/paris1.jpg);
+  }
+  33% {
+    background-image: url(../img/Paris/paris2.jpg);
+  }
+  66% {
+    background-image: url(../img/Paris/paris3.jpg);
+  }
+}
+
+#sf {
+  background-image: url(../img/sanFrancisco/sf1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#sf:hover {
+  animation-name: sfAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sfAnim {
+  0% {
+    background-image: url(../img/sanFrancisco/sf1.jpg);
+  }
+  33% {
+    background-image: url(../img/sanFrancisco/sf2.jpg);
+  }
+  66% {
+    background-image: url(../img/sanFrancisco/sf3.jpg);
+  }
+}
+
+#greece {
+  background-image: url(../img/greece/greece1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#greece:hover {
+  animation-name: GreeceAnim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes GreeceAnim {
+  0% {
+    background-image: url(../img/greece/greece1.jpg);
+  }
+  33% {
+    background-image: url(../img/greece/greece2.jpg);
+  }
+  66% {
+    background-image: url(../img/greece/greece3.jpg);
+  }
+}
+
+/*Background images for newsBox*/
+
+#indexLeftFirst {
+  background-image: url(../img/andreas-gucklhorn-mawU2PoJWfU-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#indexRightFirst {
+  background-image: url(../img/topnews.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page1LeftFirst {
+  background-image: url(../img/orangePathway.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page1RightFirst {
+  background-image: url(../img/brian-mcgowan-rCKIz0V7_Ok-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page1LeftSecond {
+  background-image: url(../img/katieJakarta.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page1RightSecond {
+  background-image: url(../img/blog.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page2LeftFirst {
+  background-image: url(../img/blog.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page2RightFirst {
+  background-image: url(../img/crowdCorona.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page3LeftFirst {
+  background-image: url(../img/southAfricaEco.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page3RightFirst {
+  background-image: url(../img/crowdCorona.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page4LeftFirst {
+  background-image: url(../img/contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page4RightFirst {
+  background-image: url(../img/brian-mcgowan-rCKIz0V7_Ok-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page4LeftSecond {
+  background-image: url(../img/katieJakarta.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#page4RightSecond {
+  background-image: url(../img/crowdCorona.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
